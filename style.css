@@ -13,6 +13,14 @@ url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600
     font-family: 'Crimson Text', serif;
     color: rgb(255, 255, 255);
 }
+
+@media (max-width:992px) {
+    html, body{
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+}
 /***** End Whole page common properties *****/
 
 /***** Pre-defined animations *****/
@@ -104,15 +112,13 @@ url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600
 /***** Body *****/
 body{
     background-color: black !important;
-    /*cursor: url('images/harrys-wand3.png'), auto;
-    color: #ffffff;*/
 }
 /***** End Body *****/
 
 /***** navbar *****/
 .navbar {
     transform: translateY(-100%);
-    animation: slideFromTop 1s ease 4s forwards;
+    animation: slideFromTop 1s ease 1s forwards;
   }
 .navImg{
     transform: translateY(-8%);
@@ -152,12 +158,10 @@ body{
         height: 100%;
         text-align: center;
       }
-      
       .nav-link {
         margin: 10px 0;
         font-size: 18px;
-      }
-      
+      }     
 }
 /***** End offcanvas *****/
 
