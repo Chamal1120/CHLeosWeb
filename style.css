@@ -354,7 +354,6 @@ body{
     height: 100%;
     background-image: url('images/mainBG.webp');
     background-size: cover;
-    background-position: center;
     z-index: -1;
     animation: revealAnimation 6s ease-in-out forwards;
     filter: blur(var(--blur-value, 0));
@@ -369,6 +368,8 @@ body{
         width: 100%;
         height: 100%;
         background-image: url('images/mainBG-vertical.webp');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         z-index: -1;
         animation: revealAnimation 6s ease-in-out forwards;
         filter: blur(var(--blur-value, 0));
