@@ -250,7 +250,7 @@ body{
 }
 @media (max-width: 767px) {
     .full-screen-section{
-        margin: 60px;
+        height: auto;
     }
     .imageHero.fade-up{
         max-width: 50%;
@@ -272,9 +272,6 @@ body{
     }
     .heroButton{
         margin: 10px auto;
-    }
-    .full-screen-section{
-        margin: 10px;
     }
     .imageHero.fade-up{
         max-width: 60%;
@@ -351,7 +348,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/mainBG.png');
+    background-image: url('images/mainBG.webp');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -359,6 +356,21 @@ body{
     filter: blur(var(--blur-value, 0));
     opacity: var(--opacity-value, 0.2);
   }
+@media (max-width:576px) {
+    .background-image::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/mainBG-vertical.webp');
+        z-index: -1;
+        animation: revealAnimation 6s ease-in-out forwards;
+        filter: blur(var(--blur-value, 0));
+        opacity: var(--opacity-value, 0.2);
+      }
+}
 
 @keyframes revealAnimation {
     0% {
