@@ -10,32 +10,23 @@ window.addEventListener('load', () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var offcanvas = new bootstrap.Offcanvas(document.getElementById('navbarOffcanvasLg'));
-    
-    // Get navigation links by their IDs
-    var aboutLink = document.getElementById("aboutLink");
-    var projectLink = document.getElementById("projectsLink");
-    var excoMessagesLink = document.getElementById("topMessagesLink");
-    var newsletterLink = document.getElementById("newsletterLink");
-    var executiveLink = document.getElementById("executiveLink");
+document.addEventListener("DOMContentLoaded", function() {
+    const hmIcon = document.getElementById("hmIcon");
+    const navLinks = document.querySelector("nav ul");
+    const navLinksList = document.querySelectorAll("nav ul li");
+  
+    hmIcon.addEventListener("click", function() {
+      navLinks.classList.toggle("show");
+    });
+  
+    navLinksList.forEach(function(link) {
+      link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+      });
+    });
+  });
+   
 
-    aboutLink.addEventListener("click", function () {
-        offcanvas.hide();
-    });
-    projectLink.addEventListener("click", function () {
-        offcanvas.hide();
-    });
-    excoMessagesLink.addEventListener('click', function () {
-        offcanvas.hide();
-    });
-    newsletterLink.addEventListener('click', function () {
-        offcanvas.hide();
-    });
-    executiveLink.addEventListener('click', function () {
-        offcanvas.hide();
-    });
-});
 
 // blurred navbar trigger
 document.addEventListener("DOMContentLoaded", function() {

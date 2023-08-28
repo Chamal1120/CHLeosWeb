@@ -5,7 +5,8 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0
 url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import 
 url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import 
+url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /***** End font imports *****/
 
 /***** Whole page common properties *****/
@@ -119,54 +120,95 @@ body{
 /***** End Body *****/
 
 /***** navbar *****/
-.navbar {
-    transform: translateY(-100%);
-    animation: slideFromTop 1s ease 1s forwards;
-  }
-.navImg{
-    transform: translateY(-8%);
-}
 .blurred-navbar {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     transition: background-color 0.3s, backdrop-filter 0.3s;
 }
-.nav-link{
-    font-family: 'Lato', sans-serif !important;
-}
+
+/* Reset some default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background: transparent;
+    display: flex;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
+    z-index: 100;
+    transform: translateY(-100%);
+    animation: slideFromTop 1s ease forwards;
+    animation-delay: 4s;
+  }
+  
+  .nav-brand-logo {
+    width: 35px;
+    margin-right: 10px;
+  }
+  
+  .nav-brand {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  
+  .navlink {
+    margin-left: 20px;
+  }
+  .navlink a{
+    text-decoration: none;
+    font-family: 'lato', sans-serif;
+    color: #ffffff;
+  }
+  
+  #hmIcon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 992px) {
+    ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      top: 50px;
+      right: 0;
+      padding-top: 1rem;
+      padding-right: 2.5rem;
+      padding-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      width: 100%;
+    }
+  
+    ul.show {
+      display: flex;
+    }
+  
+    #hmIcon {
+      display: block;
+    }
+  }
+  
+
 /***** End navbar *****/
-/***** offcanvas *****/
-@media (max-width:992px) {
-    .offcanvas {
-        background-color: #000 !important;
-        padding: 0;
-        margin: 0;
-        top: 0;
-        bottom: 0;
-        height: 100vh;
-        width: 100% !important;
-    }
-    .offcanvas-body {
-        display: flex;
-        background-color: #000;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        text-align: center;
-      }
-      .nav-link {
-        margin: 10px 0;
-        font-size: 18px;
-      }     
-}
-/***** End offcanvas *****/
 
 /***** Navlink onClick Scroll Adjustments *****/
 .scroll-section {

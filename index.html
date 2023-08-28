@@ -22,45 +22,23 @@
   <div class="page-container"></div>
   <div class="header">
     <!-- navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top blurred-navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="navImg" src="images/logo.png" alt="" height="35" width="35"> Hogwarts Leos</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-md-end flex-grow-1">
-            <li class="nav-item">
-              <a class="nav-link" id="aboutLink" href="#about">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="projectsLink" href="#projects">PROJECTS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="topMessagesLink" href="#top-messages">GREETINGS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="newsletterLink" href="#newsletter-main">NEWSLETTER</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="executiveLink" href="#executive-main">MEET THE EXCOM</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="contactLink" href="#">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+    <nav class="blurred-navbar">
+      <img class="nav-brand-logo" src="images/logo.png" style="width: 35px;">
+      <label class="nav-brand">
+        Hogwarts Leos</label>
+      <ul>
+        <li class="navlink"><a href="#about">ABOUT</a></li>
+        <li class="navlink"><a href="#projects">PROJECTS</a></li>
+        <li class="navlink"><a href="#top-messages">GREETINGS</a></li>
+        <li class="navlink"><a href="#newsletter-main">NEWSLETTER</a></li>
+        <li class="navlink"><a href="#executive-main">MEET THE EXCO</a></li>
+        <li class="navlink"><a href="#contact">CONTACT</a></li>
+      </ul>
+      <label id="hmIcon"><i class="fas fa-bars"></i></label>
+    </nav>
   <!-- Main content -->
   <main class="container" 
-  style="display: flex; flex-direction: column; display: flex;flex-direction: column;flex-grow: 1;">
+  style="display: flex; flex-direction: column; display: flex;flex-direction: column;flex-grow: 1; overflow: auto; overflow-x: hidden;">
     <section id="mainLand" class="full-screen-section">
       <div class="background-image"></div>
       <div class="content">
