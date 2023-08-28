@@ -138,6 +138,7 @@ body{
 /***** offcanvas *****/
 @media (max-width:992px) {
     .offcanvas {
+        background-color: #000 !important;
         padding: 0;
         margin: 0;
         top: 0;
@@ -147,6 +148,7 @@ body{
     }
     .offcanvas-body {
         display: flex;
+        background-color: #000;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
