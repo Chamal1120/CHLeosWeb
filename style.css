@@ -117,9 +117,6 @@ url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0
 body{
     background-color: black !important;
 }
-main{
-    overflow: hidden;
-}
 /***** End Body *****/
 
 /***** navbar *****/
@@ -173,6 +170,7 @@ body, ul {
   }
   .navlink {
     margin-left: 20px;
+    margin-top: 30px;
   }
   .navlink a{
     text-decoration: none;
@@ -193,7 +191,6 @@ body, ul {
     ul {
       display: flex;
       flex-direction: column;
-      line-height: 3rem;
       position: absolute;
       align-items: center;
       justify-content: center;
@@ -228,6 +225,7 @@ body, ul {
       }
       .overlay.active {
         display: block;
+        position: fixed;
       }
     #hmIcon {
       display: block;

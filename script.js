@@ -16,20 +16,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinksList = document.querySelectorAll("nav ul li");
     const overlay = document.getElementById("overlay");
   
+    function enableScroll() {
+      document.body.style.overflow = "auto";
+    }
+  
+    function disableScroll() {
+      document.body.style.overflow = "hidden";
+    }
+  
     hmIcon.addEventListener("click", function() {
       navLinks.classList.toggle("show");
       overlay.classList.toggle("active");
+      if (navLinks.classList.contains("show")) {
+        disableScroll();
+      } else {
+        enableScroll();
+      }
     });
   
     navLinksList.forEach(function(link) {
       link.addEventListener("click", function() {
         navLinks.classList.remove("show");
         overlay.classList.remove("active");
-        document.body.style.overflow = "auto";
+        enableScroll();
       });
     });
   });
-   
+  
+
+
+  
 document.addEventListener("DOMContentLoaded", function() {
   const nav = document.querySelector("nav");
   let prevScrollPos = window.scrollY;
