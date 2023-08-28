@@ -14,33 +14,46 @@ document.addEventListener("DOMContentLoaded", function() {
     const hmIcon = document.getElementById("hmIcon");
     const navLinks = document.querySelector("nav ul");
     const navLinksList = document.querySelectorAll("nav ul li");
+    const overlay = document.getElementById("overlay");
   
     hmIcon.addEventListener("click", function() {
       navLinks.classList.toggle("show");
+      overlay.classList.toggle("active");
     });
   
     navLinksList.forEach(function(link) {
       link.addEventListener("click", function() {
         navLinks.classList.remove("show");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "auto";
       });
     });
   });
    
-
-
-// blurred navbar trigger
 document.addEventListener("DOMContentLoaded", function() {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.remove("blurred-navbar");
-    
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 0) {
-            navbar.classList.add("blurred-navbar");
-        } else {
-            navbar.classList.remove("blurred-navbar");
-        }
-    });
+  const nav = document.querySelector("nav");
+  let prevScrollPos = window.scrollY;
+  let isAtTop = true;
+
+  window.addEventListener("scroll", function() {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > prevScrollPos) {
+      // Scrolling down
+      isAtTop = false;
+      nav.classList.add("blurred");
+    } else {
+      // Scrolling up
+      if (currentScrollPos === 0) {
+        isAtTop = true;
+        nav.classList.remove("blurred");
+      }
+    }
+
+    prevScrollPos = currentScrollPos;
+  });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("scroll", function () {
