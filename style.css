@@ -346,7 +346,7 @@ body, ul {
 @media (max-width: 767px) {
     .full-screen-section{
         height: auto;
-        margin-top: -3.5rem !important;
+        margin-top: -5.5rem !important;
     }
     .imageHero.fade-up{
         max-width: 50%;
