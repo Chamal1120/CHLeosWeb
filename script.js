@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 // blurred navbar trigger
 document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector(".navbar");
@@ -62,10 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".background-image").style.setProperty("--opacity-value", opacityValue);
     });
 });
-
-  
-
-
 
 
 

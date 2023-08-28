@@ -168,27 +168,6 @@ body{
 }
 /***** End offcanvas *****/
 
-/***** Navlink onClick Scroll Adjustments *****/
-.scroll-section {
-    scroll-margin-top: 80px;
-}
-/* Additional adjustments for specific sections */
-#about.scroll-section {
-    scroll-margin-top: 134px;
-}
-@media (max-width:768px) {
-    #about.scroll-section {
-        scroll-margin-top: 170px;
-    }
-}
-#top-messages.scroll-section {
-    scroll-margin-top: 100px;
-}
-#executive-main{
-    scroll-margin-top: 190px;
-}
-/***** End Navlink onClick Scroll Adjustments *****/
-
 /***** Hero-text *****/
 .heroClubNamefadeup{
     color: #f0c400;
