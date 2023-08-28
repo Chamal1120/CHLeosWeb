@@ -1,3 +1,18 @@
 # Official Webpage of Leo Club of Colombo Hogwarts
-![alt text](/GithubCover/GithubCover.gif)
-Leo Club of Colombo Hogwarts is a non profit charity organization established in Sri Lanka which is operated under Lions clubs International.
+
+### Preview
+
+![Initial loading](/GithubCover/GithubCover.gif)
+
+### About the Site
+
+Leo Club of Colombo Hogwarts is a youth charity organization established in Sri Lanka and is operated under Lions Clubs International. Since their club theme is inspired by the J. K. Rowling's Wizarding world, I tried to give the site a little bit of Wizadry vibe while maintaining the clean aesthetics.
+
+### Technolegies used
+
+- HTML5
+- Bootstrap 5.2.1 framework
+- CSS3
+- Javascript
+
+Background image is from the Hogwarts Legacy video game.
