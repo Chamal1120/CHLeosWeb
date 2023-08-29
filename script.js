@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function () {
       navLinks.classList.remove("show");
       overlay.classList.remove("active");
+      hmIcon.classList.remove("active");
       toggleScroll();
     });
   });
