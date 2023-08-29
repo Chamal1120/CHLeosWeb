@@ -441,7 +441,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/mainBG.webp');
+    background-image: url('images/mainBG.avif');
     background-size: cover;
     z-index: -1;
     animation: revealAnimation 6s ease-in-out forwards;
@@ -452,7 +452,7 @@ nav ul li a:hover {
 }
 @media (max-width:576px) {
     .background-image::before {
-        background-image: url('images/mainBG-vertical.webp');
+        background-image: url('images/mainBG-vertical.avif');
       }
 }
 @keyframes revealAnimation {
@@ -1024,7 +1024,17 @@ form {
     margin-bottom: 20px;
 }
 .logo-links a {
-    margin: 0 10px;
+    margin: 0 8px;
+}
+.footer-logos{
+    justify-content: center;
+    align-items: center;
+}
+.footer-text0{
+    color: #d8d8d8;
+    margin-bottom: 1px;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
 }
 .footer-text1 {
     color: #d8d8d8;
