@@ -181,18 +181,69 @@ body, ul {
     color: #ffffff;
   }
   
-  #hmIcon {
+#hmIcon {
     display: none;
-    font-size: 24px;
     cursor: pointer;
     justify-content: flex-end;
     margin-left: auto;
-  }
+    margin-top: 8px;
+}
   
-  /* Mobile Styles */
-  @media (max-width: 992px) {
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 27px;
+    position: relative;
+    cursor: pointer;
+}
+  
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: right;
+    border-radius: 2px;
+}
+  
+.bar:nth-child(1) {
+    top: 0;
+}
+  
+.bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.bar:nth-child(3) {
+    bottom: 0;
+}
+  
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(50%) rotate(-45deg);
+}
+  
+.hamburger.active .bar:nth-child(2) {
+    transform: scaleY(0);
+}
+  
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-50%) rotate(45deg);
+}
+  
+
+/* Mobile Styles */
+@media (max-width: 992px) {
     .navlink{
-        padding-top: 1rem;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: #3b3b3b;
+        transition: background-color 0.3s ease;
+    }
+    .navlink:active {
+        background-color: #1c1c1c;
     }
     ul {
       display: flex;
@@ -206,10 +257,10 @@ body, ul {
       background-color: rgba(0, 0, 0, 0);
       z-index: -1;
       width: 100%;
-      transform: translateY(50%);
+      transform: translateY(40%);
       pointer-events: none;
       opacity: 0;
-      transition: opacity 0.3s ease, transform 0.5s ease, display 0s 0.5s;
+      transition: opacity 0.2s ease, transform 0.2s ease, display 0s 0.3s;
     }
   
     ul.show {
@@ -225,18 +276,20 @@ body, ul {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.609);
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(0px);
         display: none;
-        z-index: 99; /* Place the overlay above the content but below the mobile menu */
+        z-index: 99;
+        transition: backdrop-filter 0.7s ease;
       }
       .overlay.active {
         display: block;
         position: fixed;
+        backdrop-filter: blur(60px);
       }
     #hmIcon {
       display: block;
     }
-  }
+}
   
 
 /***** End navbar *****/

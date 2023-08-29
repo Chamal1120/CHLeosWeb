@@ -65,3 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
     updateBackgroundStyles();
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hmIcon = document.getElementById("hmIcon");
+  
+    hmIcon.addEventListener("click", function () {
+      hmIcon.classList.toggle("active");
+    });
+  });
