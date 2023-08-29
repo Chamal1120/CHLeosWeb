@@ -898,6 +898,8 @@ nav ul li a:hover {
     align-items: center;
     height: auto;
     padding-bottom: 2rem;
+    padding-left:1rem ;
+    padding-right: 1rem;
 }
 .form-head1{
     display: none;
@@ -909,8 +911,10 @@ nav ul li a:hover {
     display: none;
 }
 .form-head-mobile{
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
+    color: #f0c400;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
     text-align: center;
 }
 .image-container {
@@ -954,18 +958,21 @@ form {
 
 /* Adjustments for desktop view */
 @media screen and (min-width: 768px) {
+    .form-head-mobile{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 4rem;
+        text-align: center;
+    }
     .form-container-inside {
         flex-direction: row;
     }
-
     .image-container {
         margin-bottom: 0;
     }
-
     .form-group {
       gap: 15px;
     }
-    
     .form-group label {
       text-align: right;
     }
@@ -976,23 +983,18 @@ form {
         font-size: 5rem;
         line-height: 2rem;
     }
-    
     .form-head2{
         display:flex;
         font-family: 'Lato', sans-serif;
         font-weight: 900;
         font-size: 4.7rem;
     }
-    
     .form-head3{
         display:flex;
         font-family: 'Lato', sans-serif;
         font-weight: 900;
         font-size: 13rem;
         line-height: 9rem;
-    }
-    .form-head-mobile{
-        display: none;
     }
 }
 
