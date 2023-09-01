@@ -353,7 +353,7 @@ nav ul li a:hover {
 @media (max-width: 767px) {
     .full-screen-section{
         height: auto;
-        margin-top: -8vh !important;
+        margin-top: -12vh !important;
     }
     .imageHero.fade-up{
         max-width: 50%;
@@ -377,12 +377,12 @@ nav ul li a:hover {
         font-size: 0.7rem !important;
     }
     .heroButton{
-        margin: 5vh auto;
+        margin: 4vh auto;
     }
     .imageHero.fade-up{
         max-width: 60%;
         height: auto;
-        margin-top: 2vh;
+        margin-top: 1vh;
         margin-left: 20%;
         margin-right: auto;
     }
