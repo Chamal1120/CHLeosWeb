@@ -257,18 +257,23 @@ nav ul li a:hover {
 #about.scroll-section {
     scroll-margin-top: 134px;
 }
-@media (max-width:768px) {
-    #about.scroll-section {
-        scroll-margin-top: 150px;
-    }
-}
 #top-messages.scroll-section {
     scroll-margin-top: 100px;
 }
 #executive-main{
     scroll-margin-top: 190px;
 }
-
+#contact{
+    scroll-margin-top: 30px;
+}
+@media (max-width:768px) {
+    #about.scroll-section {
+        scroll-margin-top: 150px;
+    }
+    #contact{
+        scroll-margin-top: 60px;
+    }
+}
 /***** Hero-text *****/
 .heroClubNamefadeup{
     color: #f0c400;
@@ -478,6 +483,10 @@ nav ul li a:hover {
     margin-bottom: 8rem;
     will-change: transform;
 }
+.about-image{
+    border-radius: 5px;
+    margin-top: 2rem;
+}
 .about-title{
     font-size: 5rem;
     color: #f0c400;
@@ -494,6 +503,10 @@ nav ul li a:hover {
 @media (max-width:768px) {
     .about-title{
         display: none;
+    }
+    .about-image{
+        border-radius: 5px;
+        margin-top: 0;
     }
     .about-mobile{
         font-size: 3rem;
