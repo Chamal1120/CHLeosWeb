@@ -83,3 +83,67 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all executive cards
+    const executiveCards = document.querySelectorAll(".executive-card");
+  
+    // Initially hide extra executive cards
+    for (let i = 6; i < executiveCards.length; i++) {
+      executiveCards[i].style.display = "none";
+    }
+  
+    // Select the "View All" button
+    const viewAllButton = document.getElementById("view-all-button");
+  
+    // Track the visibility state
+    let isHidden = true;
+  
+    // Add a click event listener to toggle the visibility of hidden cards
+    viewAllButton.addEventListener("click", function () {
+      for (let i = 6; i < executiveCards.length; i++) {
+        if (isHidden) {
+          // Reveal hidden cards with fade-in and scroll-down animation
+          executiveCards[i].style.display = "block";
+          animateFadeInAndScrollDown(executiveCards[i]);
+        } else {
+          // Hide cards with fade-out animation
+          fadeOut(executiveCards[i]);
+        }
+      }
+  
+      // Toggle the text of the button
+      viewAllButton.textContent = isHidden ? "Hide" : "View All";
+      isHidden = !isHidden;
+    });
+  
+    // Helper function to fade in and scroll down an element
+    function animateFadeInAndScrollDown(element) {
+      element.style.opacity = 0;
+      element.style.transform = "translateY(-15px)";
+      element.style.display = "block";
+      let opacity = 0;
+      let translateY = -10;
+      const fadeInterval = setInterval(function () {
+        opacity += 0.1;
+        translateY += 1;
+        element.style.opacity = opacity;
+        element.style.transform = `translateY(${translateY}px)`;
+        if (opacity >= 1) {
+          clearInterval(fadeInterval);
+        }
+      }, 30);
+    }
+  
+    // Helper function to fade out an element
+    function fadeOut(element) {
+      let opacity = 1;
+      const fadeInterval = setInterval(function () {
+        opacity -= 0.1;
+        element.style.opacity = opacity;
+        if (opacity <= 0) {
+          element.style.display = "none";
+          clearInterval(fadeInterval);
+        }
+      }, 30);
+    }
+  });

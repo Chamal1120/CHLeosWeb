@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <!-- font awsome lib -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Bootstrap CSS v5.2.1 -->
@@ -84,44 +88,71 @@
     <div class="projects-heading">
       <h2 id="projects" class="projects-heading scroll-section">Featured Projects</h2>
     </div>
-    <div class="project-card-wrapper">
-      <section class="projects">
-        <div class="project-card">
-            <div class="card-image">
-                <img src="images/projects/ashirwadaPoojawa.avif" alt="Project 1">
-            </div>
-            <div class="card-content">
-                <h3 class="card-title">Ashirwada Poojawa 23'</h3>
-                <p class="card-description">
-                  Colombo Mid City, Leo District 306 C2 organized "ASHIRWADA POOJAWA 23," invoking blessings for a prosperous Leoistic year. Religious ceremonies were held at temples, a mosque, a church, and a Hindu kovil, symbolizing unity and cultural respect. The event marked Leo Club of Colombo Hogwarts' inaugural year, fostering a spirit of collaboration among members.
-                </p>
-                <a href="#" class="card-button">View Project</a>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="card-image">
-                <img src="images/projects/youthcarmeetup.avif" alt="Project 2">
-            </div>
-            <div class="card-content">
-                <h3 class="card-title">Youth Vision - Car Meetup</h3>
-                <p class="card-description">
-                  Leo Youth Sports Encounter and the car meetup: A collaboration between Leo Clubs of Royal, Thurstan, and Colombo Hogwarts with the National Youth Services Council, promoting sports spirit among students. Commenced on July 31, 2023, featuring 2000+ athletes from 23 Colombo schools. Dignitaries like Chief Guest HON Sagala Rathnayaka marked the vibrant inauguration.
-                </p>
-                <a href="https://fb.watch/maNxvmtSoL/?mibextid=Nif5oz" class="card-button">View Project</a>
-            </div>
-        </div>
-        <div class="project-card">
-          <div class="card-image">
-              <img src="images/projects/comingSoon.avif" alt="Project 2">
+    <div class="project-card-container">
+    <div class="project-card">
+      <div class="project-images">
+          <div class="slider">
+              <!-- use 4:3 aspect ratio images -->
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa1.webp" alt="Project Image 1"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa2.webp" alt="Project Image 2"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa3.webp" alt="Project Image 3"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa4.webp" alt="Project Image 4"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa5.webp" alt="Project Image 5"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa6.webp" alt="Project Image 6"></div>
+              <div><img src="images/projects/ashirwadaPoojawa/ashirwadaPoojawa7.webp" alt="Project Image 7"></div>
           </div>
-          <div class="card-content">
-              <h3 class="card-title">Exciting projects coming soon</h3>
-              <p class="card-description">
-                Get ready for the upcoming inspiring initiatives from the Leo Club of Colombo Hogwarts while we excel as an exceptional non-profit charity organization on uniting young minds in acts of leadership, oppertunity and experience by blending the magic of volunteerism with the values of friendship and compassion which aim to illuminate lives and make a lasting impact on their community. Stay tuned
-              </p>
-              <a href="#" class="card-button">View Project</a>
+      </div>
+      <div class="project-info">
+          <h3 class="project-title">Ashirwada Poojawa</h3>
+          <p class="project-description">Colombo Mid City, Leo District 306 C2 organized "ASHIRWADA POOJAWA 23," invoking blessings for a prosperous Leoistic year. Religious ceremonies were held at temples, a mosque, a church, and a Hindu kovil, symbolizing unity and cultural respect. The event marked Leo Club of Colombo Hogwarts' inaugural year, fostering a spirit of collaboration among members.</p>
+          <div class="view-project-button-container">
+            <a href="#" class="view-project-button">View Project</a>
           </div>
-        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-images">
+          <div class="slider">
+              <!-- use 4:3 aspect ratio images -->
+              <div><img src="images/projects/youthVisionCar/youthVisionCar1.webp" alt="Project Image 1"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar2.webp" alt="Project Image 2"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar3.webp" alt="Project Image 3"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar4.webp" alt="Project Image 4"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar5.webp" alt="Project Image 5"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar6.webp" alt="Project Image 6"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar7.webp" alt="Project Image 7"></div>
+              <div><img src="images/projects/youthVisionCar/youthVisionCar8.webp" alt="Project Image 8"></div>
+          </div>
+      </div>
+      <div class="project-info">
+          <h3 class="project-title">Youth Vision - Car Meetup</h3>
+          <p class="project-description">Brought together over 100 performance cars and motorcycles, offering a much-needed escape for passionate petrol heads. Organized by the Leos of Royal College, Colombo Hogwarts, and Thurstan College in collaboration with the National Youth Services Council, the event aimed to create automotive content, provide networking opportunities, and showcase the stories behind car owners and their vehicles. It served as a source of inspiration and connection for enthusiasts facing economic challenges and seeking to reignite their passion for cars.</p>
+          <div class="view-project-button-container">
+            <a href="#" class="view-project-button">View Project</a>
+          </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-images">
+          <div class="slider">
+              <!-- use 4:3 aspect ratio images -->
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter1.webp" alt="Project Image 1"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter2.webp" alt="Project Image 2"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter3.webp" alt="Project Image 3"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter4.webp" alt="Project Image 4"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter5.webp" alt="Project Image 5"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter6.webp" alt="Project Image 6"></div>
+              <div><img src="images/projects/youthSportEncounter/youthSportEncounter7.webp" alt="Project Image 7"></div>
+          </div>
+      </div>
+      <div class="project-info">
+          <h3 class="project-title">Leo Sports Encounter</h3>
+          <p class="project-description">The Leo Youth Sports Encounter 2023, organized by the Leo Clubs of Royal College, Thurstan College, and Colombo Hogwarts in collaboration with the National Youth Services Council, promoted sportsmanship among 23 schools in Colombo. With over 2000 athletes participating in various sports, including cricket, netball, and athletics, the event was graced by distinguished guests. It concluded successfully with the support of the Youth Vision 2048 Committee.</p>
+          <div class="view-project-button-container">
+            <a href="#" class="view-project-button">View Project</a>
+          </div>
+      </div>
+    </div>
     </div>
     </section>
     <section id="top-messages" class="top scroll-section">
@@ -460,6 +491,7 @@
         </div>
       </div>
     </section>
+    <div class="exco-button-wrapper"><button id="view-all-button" class="exco-expand-button">View All</button></div>
     <section class="form-container" id="contact">
       <h1 class="form-head-mobile">Inquiries</h1>
       <div class="form-container-inside">
@@ -523,9 +555,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-  <!-- my script file -->
+  <!-- my script files -->
   <script src="script.js"></script>
   <!-- fliphtml5 js CDN -->
   <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- Slick js CDN -->
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="slickScript.js"></script>
 </body>
 </html>
