@@ -1032,18 +1032,11 @@ margin-left: 10px; /* Add margin to the left of the second button */
     color: #ffffff;
     border: 0;
     padding: 5px 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease, padding 0.2s ease, border-bottom-left-radius 0.2s ease, border-bottom-right-radius 0.2s ease;
 }
 .exco-expand-button:active {
-    background-color: #ffffff60;
-    padding: 10px 20px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    transform: scale(0.95);
 }
 /***** form *****/
 .form-container-inside {
