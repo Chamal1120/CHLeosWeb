@@ -309,33 +309,18 @@ nav ul li a:hover {
     border-radius: 7px;
     background-color: #891230;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'lato', sans-serif;
     font-size: 15px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: width 0.3s, letter-spacing 0.3s, background-color 0.3s, color 0.3s;
+    transition:background-color 0.1s;
     animation: fade-up 1s 2.5s both;
 }
-.heroButton::after {
-    content: '\f178';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.heroButton:hover {
-    width: 250px;
-    letter-spacing: 1px;
-    background-color: #ae1d42;
-}
-.heroButton:hover::after {
-    opacity: 1;
+.heroButton:active {
+    background-color: #be3456;
+    transform: scale(0.95) !important;
 }
 .imageHero{
     opacity: 0; 
@@ -397,7 +382,7 @@ nav ul li a:hover {
     }
     .projects-heading{
         text-align: center;
-        font-size: 3rem !important;
+        font-size: 2.5rem !important;
         margin-bottom: 0 !important;
     }
 }
@@ -485,7 +470,7 @@ nav ul li a:hover {
 }
 .about-image{
     border-radius: 5px;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .about-title{
     font-size: 5rem;
@@ -496,6 +481,7 @@ nav ul li a:hover {
     text-align: justify;
     text-align-last: right;
     text-justify: inter-word;
+    line-height: 1.6rem;
     max-width: 100%;
     margin: 0 auto;
 
@@ -539,10 +525,6 @@ nav ul li a:hover {
     }
 }
 /***** Project Cards *****/
-.projects-title{
-    font-size: 5rem;
-    color: #f0c400;
-}
 /* Card styles */
 .projects-heading{
     text-align: center;
@@ -559,8 +541,8 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
     margin-top: 1.5rem;
     margin-bottom: 5rem;
     align-items: stretch;
@@ -578,6 +560,9 @@ nav ul li a:hover {
     transition: transform 0.5s ease;
 }
 
+.project-card:hover {
+    transform: translateY(-5px);
+}
 /* Media query for 768px screens */
 @media (max-width: 992px) {
     .project-card {
@@ -590,10 +575,6 @@ nav ul li a:hover {
     .project-card {
         width: 100%; /* 100% width with margin, one card per row */
     }
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
 }
 
 .project-images {
@@ -631,6 +612,24 @@ nav ul li a:hover {
     align-items: center; /* Center vertically */
 }
 .view-project-button {
+    margin-right: 10px; /* Add margin to the right of the first button */
+}
+.view-project-button + .view-project-button {
+margin-left: 10px; /* Add margin to the left of the second button */
+}
+
+@media (min-width:992px) {
+    .view-project-button {
+        transition: letter-spacing 0.2s ease, width 0.2s ease;
+    }
+    .view-project-button:hover{
+        background-color: #0000008b;
+        color: #ffffff;
+        width: 120px;
+        letter-spacing: 0.5px;
+    }
+}
+.view-project-button {
     font-family: Lato, sans-serif;
     font-size: 14px;
     display: inline;
@@ -645,13 +644,42 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     width: 115px;
-    transition: letter-spacing 0.2s ease, width 0.2s ease;
 }
 .view-project-button:hover{
-    background-color: #0000008b;
     color: #ffffff;
-    width: 120px;
-    letter-spacing: 0.5px;
+}
+.view-project-button:active{
+    background-color: #000000b5;
+    transform: scale(0.95) !important;
+}
+.view-project-button-container2 {
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+.view-project-all-button {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    display: inline;
+    width: 100%;
+    padding: 8px 0;
+    background: #ffffff;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+.view-project-all-button:hover{
+    color: #000000;
+}
+.view-project-all-button:active{
+    background-color: #ffffffb5;
+    transform: scale(0.95) !important;
 }
 /***** Top messages section *****/
 .top{
@@ -663,7 +691,7 @@ nav ul li a:hover {
 }
 .top-topic{
     color: #f0c400;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .top-image{
     padding-top: 1rem;
@@ -744,11 +772,24 @@ nav ul li a:hover {
     place-items: center;
     margin: 0px;
     margin-top: 90px;
+    margin-bottom: 90px;
     will-change: transform;
 }
 .newsletter-topic{
     color: #f0c400;
-    font-size: 5rem;
+    font-size: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+@media (min-width:992px) {
+    .open-newsletter-button {
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    .open-newsletter-button:hover {
+        background-color: white;
+        color: black !important;
+    }
 }
 .open-newsletter-button {
     margin-top: 10px;
@@ -763,8 +804,7 @@ nav ul li a:hover {
 }
 
 .open-newsletter-button:hover {
-    background-color: white;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 @media (max-width:576px) {
     .news{
@@ -781,12 +821,7 @@ nav ul li a:hover {
     align-items: center;
     padding: 20px;
   }
-  
-.newsletter-topic {
-    font-size: 5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-  }
+
   
 .newsletter-container {
     display: flex;
@@ -832,7 +867,7 @@ nav ul li a:hover {
 /***** exco *****/
 .excom-heading{
     color: #f0c400;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 2rem;
@@ -858,14 +893,19 @@ nav ul li a:hover {
 }
 .executive-card {
     width: 300px;
-    background-color: #ffffff19;
+    background-color: #ffffff13;
     padding: 20px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.283);
+    transition: transform 0.5s !important;
+}
+.executive-card:hover {
+    transform: translateY(-5px) !important;
+    background-color: #ffffff27;
 }
 .circle {
     width: 12rem;
@@ -910,7 +950,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 .social-icon:hover {
-    background-color: #595959;
+    background-color: #252525;
 }
 @media (max-width:768px) {
     .excom-heading{
@@ -965,8 +1005,8 @@ nav ul li a:hover {
     }
     .social-icon {
         text-decoration: none;
-        width: 23px;
-        height: 23px;
+        width: 1.8rem;
+        height: 1.8rem;
         border-radius: 50%;
         margin: 0 5px;
         margin-left: 5px;
@@ -984,19 +1024,26 @@ nav ul li a:hover {
     justify-content: center;
 }
 .exco-expand-button {
+    font-family: lato, sans-serif;
+    font-size: 13px;
     display: inline-block;
     text-align: center;
-    background-color: #000000;
-    color: #000;
+    background-color: #ffffff36;
+    color: #ffffff;
     border: 0;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 5px 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.2s ease, padding 0.2s ease, border-bottom-left-radius 0.2s ease, border-bottom-right-radius 0.2s ease;
 }
-.exco-expand-button:hover {
-    background-color: #ffffff;
-    color: #000000;
+.exco-expand-button:active {
+    background-color: #ffffff60;
+    padding: 10px 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 /***** form *****/
 .form-container-inside {
@@ -1005,7 +1052,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
     padding-left:1rem ;
     padding-right: 1rem;
 }
@@ -1020,8 +1067,7 @@ nav ul li a:hover {
 }
 .form-head-mobile{
     color: #f0c400;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 5rem;
     font-size: 3rem;
     text-align: center;
 }

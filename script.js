@@ -82,15 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 200);
     });
   });
-  
+
+
   document.addEventListener("DOMContentLoaded", function () {
     // Select all executive cards
     const executiveCards = document.querySelectorAll(".executive-card");
-  
-    // Initially hide extra executive cards
-    for (let i = 6; i < executiveCards.length; i++) {
-      executiveCards[i].style.display = "none";
-    }
   
     // Select the "View All" button
     const viewAllButton = document.getElementById("view-all-button");
@@ -98,9 +94,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Track the visibility state
     let isHidden = true;
   
+    // Determine the card limit based on screen width
+    let cardLimit = window.innerWidth >= 992 ? 6 : 4;
+  
+    // Function to update the card limit based on screen width
+    function updateCardLimit() {
+      cardLimit = window.innerWidth >= 992 ? 6 : 4;
+      
+      // Initially hide extra executive cards based on the new limit
+      for (let i = 0; i < executiveCards.length; i++) {
+        if (i >= cardLimit) {
+          executiveCards[i].style.display = "none";
+        } else {
+          executiveCards[i].style.display = "block";
+        }
+      }
+      
+      // Reset the "View All" button text
+      viewAllButton.textContent = "View All";
+      isHidden = true;
+    }
+  
+    // Call the updateCardLimit function initially
+    updateCardLimit();
+  
     // Add a click event listener to toggle the visibility of hidden cards
     viewAllButton.addEventListener("click", function () {
-      for (let i = 6; i < executiveCards.length; i++) {
+      for (let i = cardLimit; i < executiveCards.length; i++) {
         if (isHidden) {
           // Reveal hidden cards with fade-in and scroll-down animation
           executiveCards[i].style.display = "block";
@@ -112,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   
       // Toggle the text of the button
-      viewAllButton.textContent = isHidden ? "Hide" : "View All";
+      viewAllButton.textContent = isHidden ? "Collapse" : "View All";
       isHidden = !isHidden;
     });
   
@@ -146,4 +166,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }, 30);
     }
+  
+    // Add a window resize event listener to update the card limit
+    window.addEventListener("resize", updateCardLimit);
   });
+  

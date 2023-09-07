@@ -6,9 +6,9 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 4000,
         swipe: true,
-        dots: false, // Optional: Show pagination dots
-        arrows: false, // Optional: Hide navigation arrows
-        speed: 1000,
+        dots: false,
+        arrows: false,
+        speed: 2000,
         easing: 'ease-in-out',
     });
 });
