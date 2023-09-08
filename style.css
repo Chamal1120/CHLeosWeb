@@ -525,6 +525,9 @@ nav ul li a:hover {
     }
 }
 /***** Project Cards *****/
+.slider{
+    transform: translate3d(0, 0, 0) !important;
+}
 /* Card styles */
 .projects-heading{
     text-align: center;
@@ -557,11 +560,6 @@ nav ul li a:hover {
     overflow: hidden;
     margin: 10px;
     position: relative;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
 }
 /* Media query for 768px screens */
 @media (max-width: 992px) {
@@ -576,7 +574,6 @@ nav ul li a:hover {
         width: 100%; /* 100% width with margin, one card per row */
     }
 }
-
 .project-images {
     max-width: 100%;
     overflow: hidden;
@@ -608,11 +605,11 @@ nav ul li a:hover {
 }
 .view-project-button-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
 }
 .view-project-button {
-    margin-right: 10px; /* Add margin to the right of the first button */
+    margin-right: 10px;
 }
 .view-project-button + .view-project-button {
 margin-left: 10px; /* Add margin to the left of the second button */
@@ -1164,7 +1161,7 @@ form {
 /***** footer *****/
 .footer {
     background-color: #161616a1;
-    padding: 30px 25px;
+    padding: 35px 25px;
     text-align: center;
 }
 .logo-links {
@@ -1181,7 +1178,7 @@ form {
     color: #d8d8d8;
     margin-bottom: 1px;
     font-family: 'Lato', sans-serif;
-    font-size: 11px;
+    font-size: 20px;
 }
 .footer-text1 {
     color: #d8d8d8;
@@ -1245,12 +1242,19 @@ form {
 }
 .footer-logo-img{
     margin-top: 10px;
+    width: 35px;
+}
+.footer-logo-img-sl{
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    width: 80px !important;
 }
 @media (min-width:768px) {
     .footer-logo-img{
         width: 50px;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
-        margin-top: 10px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
