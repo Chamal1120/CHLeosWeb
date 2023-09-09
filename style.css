@@ -6,7 +6,6 @@ body, ul, h1, h2, h3, p, img {
 }
 body {
     scroll-behavior: smooth;
-    font-family: 'Crimson Text', serif;
     color: #fff;
     background-color: black !important;
 }
@@ -14,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Brodies', sans-serif;
     color: rgb(255, 255, 255);
 }
 
@@ -82,25 +81,7 @@ body {
 }
 
 /***** spinner properties *****/
-.spinner{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 50px;
-    width: 50px;
-    border: 2px solid;
-    border-color: white transparent;
-    z-index: 9999;
-    border-radius: 50%;
-    animation: spin 1.3s infinite ;
-}
-@media (max-width:768px) {
-    .spinner{
-        position: absolute;
-        top: 45%;
-        left: 45%;
-    }
-}
+
 
 /***** navbar *****/
 nav {
@@ -124,13 +105,19 @@ nav.blurred {
 .nav-brand-logo {
     width: 40px;
     height: 42px;
-    margin-right: 20px;
+    margin-right: 12px;
 } 
 .nav-brand {
     margin-top: 8px;
     font-weight: 400;
     font-size: 20px;
     display: flex;   
+}
+@media (max-width:576px) {
+    .nav-brand{
+        margin-top: 12px;
+        font-size: 15px;
+    }
 } 
 ul {
     list-style-type: none;
@@ -276,8 +263,9 @@ nav ul li a:hover {
 }
 /***** Hero-text *****/
 .heroClubNamefadeup{
+    font-family:'Times New Roman', Times, serif;
     color: #f0c400;
-    font-size: 6rem;
+    font-size: 5.5rem;
     opacity: 0;
     animation: fade-up 1s 1.5s both;
 }
@@ -375,15 +363,6 @@ nav ul li a:hover {
         margin-top: 1vh;
         margin-left: 20%;
         margin-right: auto;
-    }
-    .projects-main-title{
-        font-size: 3rem !important;
-        margin-bottom: 10px !important;
-    }
-    .projects-heading{
-        text-align: center;
-        font-size: 2.5rem !important;
-        margin-bottom: 0 !important;
     }
 }
 /***** Scroll down indicator *****/
@@ -495,10 +474,11 @@ nav ul li a:hover {
         margin-top: 0;
     }
     .about-mobile{
-        font-size: 3rem;
+        font-size: 2.2rem;
         color: #f0c400;
         text-align: center;
         margin-top: 20px;
+        margin-bottom: 1rem;
     }
     .about-text{
         margin-top: 20px;
@@ -509,6 +489,7 @@ nav ul li a:hover {
         margin-bottom: 10px;
     }
     .about-text{
+        margin-top: 2rem;
         font-size: 0.8rem;
         text-align: justify;
         text-align-last: left !important;
@@ -537,7 +518,13 @@ nav ul li a:hover {
     margin-top: 3rem;
     will-change: transform;
 }
-
+@media (max-width:768px) {
+    .projects-heading{
+        text-align: center;
+        font-size: 1.9rem !important;
+        margin-bottom: 0 !important;
+    }
+}
 /* CSS for Project Card Container */
 .project-card-container {
     display: flex;
@@ -547,7 +534,7 @@ nav ul li a:hover {
     margin-left: 0.7rem;
     margin-right: 0.7rem;
     margin-top: 1.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 0;
     align-items: stretch;
 }
 
@@ -589,6 +576,8 @@ nav ul li a:hover {
 }
 
 .project-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
     font-size: 20px;
     text-align: center;
     color: #fff;
@@ -652,8 +641,16 @@ margin-left: 10px; /* Add margin to the left of the second button */
 .view-project-button-container2 {
     display: flex;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+}
+@media (max-width:768px) {
+    .view-project-button-container2 {
+        display: flex;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
 }
 .view-project-all-button {
     font-family: Lato, sans-serif;
@@ -706,6 +703,9 @@ margin-left: 10px; /* Add margin to the left of the second button */
     font-style: italic;
 }
 .top-text{
+    font-family: 'Crimson', serif;
+    font-size: 14px;
+    line-height: 26px;
     font-style: italic;
     text-align: justify;
     text-align-last: right;
@@ -715,8 +715,8 @@ margin-left: 10px; /* Add margin to the left of the second button */
     content: "“";
     font-size: 8em;
     position: relative;
-    top: 4rem;
-    right: 0.3rem;
+    top: 3.3rem;
+    right: 0;
     line-height: 0;
 }
 .top-text::after {
@@ -734,13 +734,13 @@ margin-left: 10px; /* Add margin to the left of the second button */
     line-height: 0.5rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .top{
         margin: 20px;
     }
     .top-topic{
         color: #f0c400;
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         text-align: center;
     }
     .top-title2{
@@ -778,31 +778,19 @@ margin-left: 10px; /* Add margin to the left of the second button */
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
-@media (min-width:992px) {
-    .open-newsletter-button {
-        transition: background-color 0.3s, transform 0.2s;
-    }
-    
-    .open-newsletter-button:hover {
-        background-color: white;
-        color: black !important;
-    }
-}
+
 .open-newsletter-button {
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
+    padding: 8px 19px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.open-newsletter-button:hover {
-    color: rgb(255, 255, 255);
-}
 @media (max-width:576px) {
     .news{
         margin-top: 40px;
@@ -812,13 +800,6 @@ margin-left: 10px; /* Add margin to the left of the second button */
         text-align: center;
     }
 }
-#newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
   
 .newsletter-container {
     display: flex;
@@ -833,7 +814,7 @@ margin-left: 10px; /* Add margin to the left of the second button */
     flex-direction: column;
     align-items: center;
     flex: 0 0 calc(33.33% - 40px);
-    padding: 0 20px;
+    padding: 0 30px;
     box-sizing: border-box;
 }
 
@@ -843,24 +824,88 @@ margin-left: 10px; /* Add margin to the left of the second button */
 }
   
 .open-newsletter-button {
-    margin-top: 10px;
+    font-family: 'lato', sans-serif;
+    margin-top: 30px;
 }
-
+.open-newsletter-button:active {
+    transform: scale(0.95);
+}
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .newsletter-container {
-      max-width: calc(100% + 20px);
+      max-width: calc(80% + 20px);
       justify-content: start;
       margin-left: 0;
     }
     .newsletter {
       flex: 0 0 calc(100% - 20px);
+      padding: 0px 30px;
     }
     .newsletter-topic{
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 }
+.newsletter-container {
+    scrollbar-width: thin;
+    scrollbar-color: #525252 #00000000; /* You can adjust the colors as needed */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-color: transparent transparent; /* Firefox (scrollbar thumb and track) */
+}
 
+.newsletter-container::-webkit-scrollbar {
+    width: 0px; /* Safari and Chrome */
+    background: transparent; /* Safari and Chrome (scrollbar track) */
+}  
+
+.scroll-indicators {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1; /* Ensure the indicators are above other content */
+}
+  
+.scroll-indicator {
+    width: 30px;
+    height: 30px;
+    background-color: #d4d4d482;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 10px;
+}
+.scroll-indicator:active {
+    transform: scale(0.95);
+}
+.fa-chevron-left, .fa-chevron-right {
+    margin-top: 5px;
+    color: #000;
+}
+.scroll-indicator.left {
+    margin-right: 35vw;
+}
+
+.scroll-indicator.right {
+    margin-left: 35vw;
+}
+
+@media (min-width:992px) {
+    .scroll-indicator.left {
+        margin-right: 35vw;
+    }
+        
+    .scroll-indicator.right {
+        margin-left: 35vw;
+    } 
+}
+  
 /***** exco *****/
 .excom-heading{
     color: #f0c400;
@@ -952,10 +997,10 @@ margin-left: 10px; /* Add margin to the left of the second button */
 @media (max-width:768px) {
     .excom-heading{
         color: #f0c400;
-        font-size: 3rem;
+        font-size: 1.9rem;
         text-align: center;
         margin-top: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5px;
     }
 }
 
@@ -1025,11 +1070,11 @@ margin-left: 10px; /* Add margin to the left of the second button */
     font-size: 13px;
     display: inline-block;
     text-align: center;
-    background-color: #ffffff36;
-    color: #ffffff;
+    background-color: #ffffffc5;
+    color: #000000;
     border: 0;
     padding: 5px 20px;
-    border-radius: 1rem;
+    border-radius: 10px;
     cursor: pointer;
 }
 .exco-expand-button:active {
@@ -1058,7 +1103,7 @@ margin-left: 10px; /* Add margin to the left of the second button */
 .form-head-mobile{
     color: #f0c400;
     padding-top: 5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 .image-container {
@@ -1088,6 +1133,7 @@ form {
 } 
 .form-group input,
 .form-group textarea {
+    font-family: 'lato', sans-serif;
     width: 100%;
     padding: 8px;
     border: none;
@@ -1178,7 +1224,8 @@ form {
     color: #d8d8d8;
     margin-bottom: 1px;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-weight:700;
+    font-size: 14px;
 }
 .footer-text1 {
     color: #d8d8d8;
@@ -1258,3 +1305,58 @@ form {
         margin-bottom: 1rem;
     }
 }
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 85px;
+    width: 85px;
+    margin-top: -42.5px; /* Half of the height */
+    margin-left: -42.5px; /* Half of the width */
+    border: 2px solid;
+    border-color: white transparent;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: spin 1.3s infinite;
+}
+
+.spinner-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    margin-top: -35px; /* Half of the height */
+    margin-left: -35px; /* Half of the width */
+    opacity: 50%;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .spinner-img {
+        width: 35px;
+        margin-top: -17.5px; /* Half of the height */
+        margin-left: -17.5px; /* Half of the width */
+    }
+
+    .spinner {
+        height: 50px;
+        width: 50px;
+        margin-top: -25px; /* Half of the height */
+        margin-left: -25px; /* Half of the width */
+    }
+}
+

@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
   <!-- Google fonts import -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/brodies" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/zidna" rel="stylesheet">
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css">
 <!-- Slick CSS -->
@@ -18,8 +21,9 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-  <div class="spinner">
-    <img id="logo" src="images/logo.avif" alt="Logo">
+  <div class="spinner-container">
+    <div class="spinner"></div>
+    <img class="spinner-img" src="images/loadingLogo.avif" alt="loading-logo">
   </div>
   <div class="page-container"></div>
   <div class="header">
@@ -31,8 +35,8 @@
       <ul class="navbar-links">
         <li class="navlink"><a href="#about">ABOUT</a></li>
         <li class="navlink"><a href="#projects">PROJECTS</a></li>
-        <li class="navlink"><a href="#top-messages">GREETINGS</a></li>
         <li class="navlink"><a href="#newsletter-main">NEWSLETTER</a></li>
+        <li class="navlink"><a href="#top-messages">NAVIGATORS</a></li>
         <li class="navlink"><a href="#executive-main">MEET THE EXCO</a></li>
         <li class="navlink"><a href="#contact">CONTACT</a></li>
       </ul>
@@ -157,10 +161,34 @@
           </div>
       </div>
     </div>
+    </div>
     <div class="view-project-button-container2">
       <a href="#" class="view-project-all-button">View All Projects</a>
     </div>
-    </div>
+    <section id="newsletter-main" class="news scroll-section">
+      <h1 class="newsletter-topic">Club Newsletter</h1>
+      <div class="newsletter-container">
+        <!-- Add more newsletters here
+        NOTE: When you add more newsletter code snippets,
+        don't forget to change justify-content to 'start' in newsletter-container CSS element -->
+        <div class="newsletter">
+          <img class="flipbook-cover" src="images/NewsletterCovers/Diadem-Inaugural second edition.webp" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/bqhp" data-width="960" data-height="568" data-title="">
+          <button class="open-newsletter-button" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/bqhp" data-width="960" data-height="568" data-title="">View this Newsletter</button>
+        </div>
+        <div class="newsletter">
+          <img class="flipbook-cover" src="images/NewsletterCovers/Diadem-Inaugural Issue.webp" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/pcmj" data-width="960" data-height="568" data-title="">
+          <button class="open-newsletter-button" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/pcmj" data-width="960" data-height="568" data-title="">View this Newsletter</button>
+        </div>
+      </div>
+      <div class="scroll-indicators">
+        <div class="scroll-indicator left" id="scroll-left">
+          <span><i class="fa-solid fa-chevron-left"></i></span> <!-- Left arrow character -->
+        </div>
+        <div class="scroll-indicator right" id="scroll-right">
+          <span><i class="fa-solid fa-chevron-right"></i></span> <!-- Right arrow character -->
+        </div>
+      </div>
+    </section>
     <section id="top-messages" class="top scroll-section">
       <h2 class="top-topic">
         Our Navigators
@@ -184,7 +212,7 @@
         <div class="row d-sm-flex align-items-center">
           <div class="col-md-6 order-2 order-md-1">
             <p class="top-text" style="text-align-last: left;">
-              Greetings to the Leo Club of Hogwarts! From Leo District 306 C2, we wish you success on your journey. Lead with experienced Leos, including Leo Akila Weragoda, as you embrace volunteerism and unity. Your potential for change is immense. Embrace diversity, remain resilient, and inspire others. Congratulations on your establishment; may your journey exemplify the Leo spirit and bring pride to Hogwarts.
+              Greetings to the Leo Club of Colombo Hogwarts! From Leo District 306 C2, we wish you success on your journey. Lead with experienced Leos, including Leo Akila Weragoda, as you embrace volunteerism and unity. Your potential for change is immense. Embrace diversity, remain resilient, and inspire others. Congratulations on your establishment; may your journey exemplify the Leo spirit and bring pride to C2 leo fam.
             </p>
             <h2 class="top-title2">Leo Lion Lakisha Perera PFLM</h2>
             <h2 class="top-title2 top-position">District President</h2>
@@ -222,22 +250,6 @@
               <img src="images/exco/Akila.webp" alt="top borad Image" class="img-fluid top-image">
             </div>
           </div>
-      </div>
-    </section>
-    <section id="newsletter-main" class="news scroll-section">
-      <h1 class="newsletter-topic">Club Newsletters</h1>
-      <div class="newsletter-container">
-        <!-- Add more newsletters here
-        NOTE: When you add more newsletter code snippets,
-        don't forget to change justify-content to 'start' in newsletter-container CSS element -->
-        <div class="newsletter">
-          <img class="flipbook-cover" src="images/NewsletterCovers/Diadem-Inaugural second edition.webp" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/bqhp" data-width="1280" data-height="720" data-title="">
-          <button class="open-newsletter-button" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/bqhp" data-width="1280" data-height="720" data-title="">View Newsletter</button>
-        </div>
-        <div class="newsletter">
-          <img class="flipbook-cover" src="images/NewsletterCovers/Diadem-Inaugural Issue.webp" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/pcmj" data-width="1280" data-height="720" data-title="">
-          <button class="open-newsletter-button" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/zbwyi/pcmj" data-width="1280" data-height="720" data-title="">View Newsletter</button>
-        </div>
       </div>
     </section>
     <div>
