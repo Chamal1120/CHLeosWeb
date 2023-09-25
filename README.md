@@ -4,7 +4,7 @@
 
 ![Initial loading](/GithubCover/GithubCovervid.avif)
 
- > ### Live link 👉 [https://www.hogwartsleos.org/](hogwartsleos.org)
+ > ### Live link 👉 [hogwartsleos.org](https://www.hogwartsleos.org/)
 
 ### Screenshots
 
