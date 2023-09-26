@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Variables
   const spinnerWrapperEl = document.querySelector('.spinner');
   const hmIcon = document.getElementById("hmIcon");
   const nav = document.querySelector("nav");
@@ -11,11 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const viewAllButton = document.getElementById("view-all-button");
   let isAtTop = true;
   let prevScrollPos = window.scrollY;
-  let isThrottled = false; // Throttle flag
-  let cardLimit = 0; // Initialize cardLimit variable
-  let isHidden = true; // Initialize isHidden variable
+  let isThrottled = false;
+  let cardLimit = 0;
+  let isHidden = true;
 
-  // Helper functions
   function toggleScroll() {
     const shouldScroll = !navLinks.classList.contains("show");
     document.body.style.overflow = shouldScroll ? "auto" : "hidden";
@@ -47,7 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
     cardLimit = window.innerWidth >= 992 ? 6 : 4;
 
     executiveCards.forEach((card, index) => {
-      card.style.display = index < cardLimit ? "block" : "none";
+      if (index < cardLimit) {
+        card.style.display = "block";
+        const images = card.querySelectorAll("img");
+        images.forEach(image => {
+          image.loading = "lazy";
+        });
+      } else {
+        card.style.display = "none";
+      }
     });
 
     viewAllButton.textContent = isHidden ? "View All" : "Collapse";
@@ -56,21 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function scrollHandler() {
     updateNavBlur();
     updateBackgroundStyles();
-    requestAnimationFrame(scrollHandler); // Recursive call using requestAnimationFrame
+    requestAnimationFrame(scrollHandler);
   }
 
-  // Throttle scroll event to limit the rate of function calls
   function throttleScrollHandler() {
     if (!isThrottled && isAtTop) {
       isThrottled = true;
       requestAnimationFrame(scrollHandler);
       setTimeout(() => {
         isThrottled = false;
-      }, 100); // Adjust the throttle delay as needed
+      }, 100);
     }
   }
 
-  // Event listeners
   hmIcon.addEventListener("pointerdown", function (event) {
     const shouldShow = !navLinks.classList.contains("show");
     navLinks.classList.toggle("show", shouldShow);
@@ -102,43 +106,34 @@ document.addEventListener("DOMContentLoaded", function () {
     isHidden = !isHidden;
   });
 
-  window.addEventListener("scroll", throttleScrollHandler); // Attach throttled scroll event listener
+  window.addEventListener("scroll", throttleScrollHandler);
 
-  // Variables for Newsletter Container
   const container = document.querySelector(".newsletter-container");
   const scrollLeftButton = document.getElementById("scroll-left");
   const scrollRightButton = document.getElementById("scroll-right");
 
-  // Function to scroll left
   function scrollLeft() {
-    container.scrollBy({ left: -350, behavior: "smooth" }); // Adjust the scroll amount as needed
+    container.scrollBy({ left: -350, behavior: "smooth" });
   }
 
-  // Function to scroll right
   function scrollRight() {
-    container.scrollBy({ left: 350, behavior: "smooth" }); // Adjust the scroll amount as needed
+    container.scrollBy({ left: 350, behavior: "smooth" });
   }
 
-  // Add click event listeners to the buttons
   scrollLeftButton.addEventListener("click", scrollLeft);
   scrollRightButton.addEventListener("click", scrollRight);
+  scrollLeftButton.style.opacity = "0";
 
-  // Hide the left indicator initially
-  scrollLeftButton.style.opacity = "0"; // Set opacity to make it invisible
-
-  // Check the scroll position to toggle left indicator visibility
   container.addEventListener("scroll", function () {
     if (container.scrollLeft === 0) {
-      scrollLeftButton.style.opacity = "0"; // Hide when at the leftmost position
+      scrollLeftButton.style.opacity = "0";
     } else {
-      scrollLeftButton.style.opacity = "1"; // Make it visible when scrolling starts
+      scrollLeftButton.style.opacity = "1";
     }
   });
 
-  // Initial setup for both Navigation Menu and Newsletter Container
   updateCardLimit();
 
-  // Function to remove the loading spinner
   function removeLoadingSpinner() {
     const spinnerContainer = document.querySelector(".spinner-container");
     if (spinnerContainer) {
@@ -146,6 +141,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Attach the "load" event listener to the window
   window.addEventListener("load", removeLoadingSpinner);
 });
