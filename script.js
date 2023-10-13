@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const spinnerWrapperEl = document.querySelector('.spinner');
+  const spinnerWrapperEl = document.querySelector(".spinner");
   const hmIcon = document.getElementById("hmIcon");
   const nav = document.querySelector("nav");
   const navLinks = nav.querySelector("ul");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index < cardLimit) {
         card.style.display = "block";
         const images = card.querySelectorAll("img");
-        images.forEach(image => {
+        images.forEach((image) => {
           image.loading = "lazy";
         });
       } else {
