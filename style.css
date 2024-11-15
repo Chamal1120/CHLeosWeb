@@ -815,7 +815,7 @@ nav ul li a:hover {
   gap: 20px;
   max-width: calc(100% + 40px);
   margin: 0 -20px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .newsletter {
   display: flex;
