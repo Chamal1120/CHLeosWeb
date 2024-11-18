@@ -2,14 +2,6 @@
 
  > ### Live link 👉 [hogwartsleos.org](https://www.hogwartsleos.org/)
 
-### Screenshots
-
-![Desktop view](/GithubCover/desktop_landing.avif)
-(Desktop view)
-
-![Mobile view](/GithubCover/mobile_view.avif)
-(Mobile view)
-
 ### About the Site
 
 Leo Club of Colombo Hogwarts is a youth charity organization established in Sri Lanka and is operated under Lions Clubs International. Since their club theme is inspired by the J. K. Rowling's Wizarding world, I tried to give the site a little bit of Wizadry vibe while maintaining the clean aesthetics. 
@@ -33,6 +25,20 @@ Leo Club of Colombo Hogwarts is a youth charity organization established in Sri 
 - Jquery for Slick carousel initialization and adjustments
 - Vercel for production deployment and hosting
 - Squarespace for domain name services
+
+### Credits
+
+BG image is from Unsplash
+
+Image details,
+
+A castle on top of a hill in the fog
+Hogwarts Mystery
+
+Ba Na Hills, Thôn An Sơn, Hòa Ninh, Hòa Vang, Da Nang, Vietnam
+Published on November 13, 2024
+FUJIFILM, X-T30 II
+Free to use under the Unsplash License
 
 ### Contributing
 
