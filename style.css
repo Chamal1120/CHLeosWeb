@@ -421,7 +421,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/mainBG.webp");
+  background-image: url("images/dang-thao1.jpg");
   background-size: cover;
   z-index: -1;
   animation: revealAnimation 6s ease-in-out forwards;
@@ -432,7 +432,7 @@ nav ul li a:hover {
 }
 @media (max-width: 576px) {
   .background-image::before {
-    background-image: url("images/mainBG-vertical.webp");
+    background-image: url("images/dang-thao2.jpg");
   }
 }
 @keyframes revealAnimation {
